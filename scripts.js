@@ -95,19 +95,22 @@ document.addEventListener('DOMContentLoaded', function () {
        /*  const weekDayValue = parseNumber(row.cells[4].textContent); */
 
         const labels = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
-        const data1 = [yesterdayValue, currentDayValue, getRandomNumber(70000, 120000), getRandomNumber(70000, 120000), getRandomNumber(70000, 120000), getRandomNumber(70000, 120000), getRandomNumber(70000, 120000)];
-        const data2 = [yesterdayValue, currentDayValue, getRandomNumber(700, 1500), getRandomNumber(700, 1500), getRandomNumber(700, 1500), getRandomNumber(700, 1500), getRandomNumber(700, 1500)];
-        const data3 = [yesterdayValue, currentDayValue, getRandomNumber(15, 40), getRandomNumber(15, 40), getRandomNumber(15, 40), getRandomNumber(15, 40), getRandomNumber(15, 40)];
+        const data1 = [yesterdayValue, currentDayValue, getRandomNumber(400000, 520000), getRandomNumber(400000, 520000), getRandomNumber(400000, 520000), getRandomNumber(400000, 520000), getRandomNumber(400000, 520000)];
+        const data2 = [yesterdayValue, currentDayValue, getRandomNumber(70000, 120000), getRandomNumber(70000, 120000), getRandomNumber(70000, 120000), getRandomNumber(70000, 120000), getRandomNumber(70000, 120000)];
+        const data3 = [yesterdayValue, currentDayValue, getRandomNumber(700, 1500), getRandomNumber(700, 1500), getRandomNumber(700, 1500), getRandomNumber(700, 1500), getRandomNumber(700, 1500)];
+        const data4 = [yesterdayValue, currentDayValue, getRandomNumber(15, 40), getRandomNumber(15, 40), getRandomNumber(15, 40), getRandomNumber(15, 40), getRandomNumber(15, 40)];
        
 
 
         let selectedData;
-        if (row.classList.contains('cash')) {
+        if (row.classList.contains('fullCash')){
             selectedData = data1;
-        } else if (row.classList.contains('mdlDlt')) {
+        } else if (row.classList.contains('cash')) {
             selectedData = data2;
-        } else if (row.classList.contains('count')) {
+        } else if (row.classList.contains('mdlDlt')) {
             selectedData = data3;
+        } else if (row.classList.contains('count')) {
+            selectedData = data4;
         }
 
 
@@ -149,6 +152,3 @@ document.addEventListener('DOMContentLoaded', function () {
 
     buildGraph();
 });
-
-
-
