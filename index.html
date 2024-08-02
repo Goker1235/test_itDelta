@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Таблица с показателями</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <table class="table__top">
+            <thead>
+                <tr>
+                    <th>Показатель</th>
+                    <th class="blue">Текущий день</th>
+                    <th colspan="2">Вчера</th>
+                    <th>Этот день недели</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="cash">
+                    <td>Выручка, руб.</td>
+                    <td class="blue">500 521</td>
+                    <td class="green">480 521</td>
+                    <td class="percentage"></td>
+                    <td class="red">4 805 121</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+        <canvas id="Graph" width="400" height="200"></canvas>
+
+
+        <table class="table__bottom">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th class="blue"></th>
+                    <th colspan="2"></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="active cash">
+                    <td>Наличные</td>
+                    <td class="blue">300 000</td>
+                    <td class="green">300 000</td>
+                    <td class="percentage"></td>
+                    <td class="">300 000</td>
+                </tr>
+                <tr class="cash">
+                    <td>Безналичный рассчет</td>
+                    <td class="blue">100 000</td>
+                    <td class="green">100 000</td>
+                    <td class="percentage"></td>
+                    <td class="">100 000</td>
+                </tr>
+                <tr class="cash">
+                    <td>Кредитные карты</td>
+                    <td class="blue">100 521</td>
+                    <td class="green">100 521</td>
+                    <td class="percentage"></td>
+                    <td class="">100 521</td>
+                </tr>
+                <tr class="mdlDlt">
+                    <td>Средний чек, руб</td>
+                    <td class="blue">1300</td>
+                    <td class="green">900</td>
+                    <td class="percentage"></td>
+                    <td class="red">900</td>
+                </tr>
+                <tr class="mdlDlt">
+                    <td>Средний гость, руб</td>
+                    <td class="blue">1200</td>
+                    <td class="green">800</td>
+                    <td class="percentage"></td>
+                    <td class="red">800</td>
+                </tr>
+                <tr class="mdlDlt">
+                    <td>Удаление из чека (после оплаты), руб</td>
+                    <td class="blue">1000</td>
+                    <td class="green">1100</td>
+                    <td class="percentage"></td>
+                    <td class="red">900</td>
+                </tr>
+                <tr class="mdlDlt">
+                    <td>Удаление из чека (до оплаты), руб</td>
+                    <td class="blue">1300</td>
+                    <td class="green">1300</td>
+                    <td class="percentage"></td>
+                    <td class="red">900</td>
+                </tr>
+                <tr class="count">
+                    <td>Количество чеков</td>
+                    <td class="blue">34</td>
+                    <td class="green">36</td>
+                    <td class="percentage"></td>
+                    <td class="">34</td>
+                </tr>
+                <tr class="count">
+                    <td>Количество гостей</td>
+                    <td class="blue">34</td>
+                    <td class="green">36</td>
+                    <td class="percentage"></td>
+                    <td class="red">32</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./scripts.js"></script>
+
+</body>
+
+</html>
